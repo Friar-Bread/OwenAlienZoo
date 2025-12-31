@@ -2,7 +2,7 @@
     import Banner from '$lib/zoo_banner.svelte';
     import sky from '$lib/assets/night_sky.png';
 	// instance-level logic goes here
-    let fact_num = $state(0);
+    let fact_num = $state(1);
 </script>
 
 
@@ -75,9 +75,32 @@
         font-size: 1.75em;
     }
     .interact_text {
+        position: relative;
+        bottom:-25px;
+        min-width: 300px;
         font-size: 4.5em;
         color:white;
     }
+    .good-button{
+        font-size:2em;
+        position:absolute;
+        padding: 10px;
+        top: auto;
+        cursor: pointer;
+        border-radius: 15px;
+        border: none;
+        background-color: rgba(223, 253, 233, 0.9);
+    }
+    .good-button:hover{
+        background-color: rgba(161, 183, 168, 0.75);
+    }
+    .decrease_but{
+        left: 300px;
+    }
+    .increase_but{
+        right: 300px;
+    }
+    
 </style>
 
 
@@ -102,14 +125,14 @@
             aliens among us
         </p>
     </div>
+    <button onclick={() => fact_num--} class="decrease_but good-button">
+        Prev. Fact
+    </button>
+    <button onclick={() => fact_num++} class="increase_but good-button">
+        Next Fact
+    </button>
     <div class="interact_link">
-        <h1 class ="interact_text">Interact with it</h1>
+        <a href="/interact" class ="interact_text">Interact with it</a>
     </div>
     <Banner />
 </div>
-<button onclick={() => fact_num--}>
-	Prev. Fact
-</button>
-<button onclick={() => fact_num++}>
-	Next Fact
-</button>
