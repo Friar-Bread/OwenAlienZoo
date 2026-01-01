@@ -3,8 +3,11 @@
     import sky from '$lib/assets/night_sky.png';
 	// instance-level logic goes here
     let fact_num = $state(1);
+    $effect(() =>  {
+        if (fact_num===4) {fact_num = 1;}
+        else if (fact_num===0) {fact_num = 3;}
+    });
 </script>
-
 
 
 <style>
@@ -111,19 +114,34 @@
     
     <div class="content">
         <h1>ALIENS</h1>
-        <p>No reading the documentation <br>
-            lorem ipsum <br>
-            blah blah blah <br>
-            aliens among us
+        <p>This page will tell you about aliens <br>
+            The mysterious beings from outer space <br>
+            Little green men <br>
+            Knowing the facts could save your life.
         </p>
     </div>
     <div class="facts">
         <h1>FACTS - Number {fact_num}</h1>
-        <p>No reading the documentation <br>
-            lorem ipsum <br>
-            blah blah blah <br>
-            aliens among us
-        </p>
+        {#if fact_num === 1}
+            <p>Aliens are very real <br>
+                They are all around us <br>
+                Be nice to aliens <br>
+                aliens are among us
+            </p>
+        {:else if fact_num === 2}
+            <p>Aliens can not eat burgers and other meats <br>
+                This is because they are vegetarian. <br>
+                It is still unsure if they will eat beyond burgers <br>
+                Human flesh eating aliens are super unlikely
+            </p>
+        {:else if fact_num === 3}
+            <p>Aliens do not like water <br>
+                Don't take them to the swimming pool with you <br>
+                This is because their home planet is very dry. <br>
+                They can swim in bromine if you have it.
+            </p>
+        {/if}
+        
     </div>
     <button onclick={() => fact_num--} class="decrease_but good-button">
         Prev. Fact

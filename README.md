@@ -1,20 +1,16 @@
-# Owen Alien Zoo
-## Developing
-```sh
-npm run dev
+# Owen Alien ~~Zoo~~   Fudge
+This project was originally going to be for zoo but I ran out of time so now I'm submitting it for fudge fudge fudge.
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+This project tought me a ton about web developement and jasvascript.
+I had done a very little amount of HTML before but this was my first project.
+It went decent despite some problems with spacing and stuff.
 
-## Building
+I have done a bit of java script before but nothing as complex as this.
 
-To create a production version of your app:
+I had to do lots of googling and reading docs to make this work.
 
-```sh
-npm run build
-```
+Svelte was probably not the easiest way for me to learn all this but I'm done with it now.
 
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+The site is pretty simple with a couple "facts" and an interact page.
+Theres just a couple of pages but this took me a while.
+I spent a while debugging do if I did it again it would have been much quicker.

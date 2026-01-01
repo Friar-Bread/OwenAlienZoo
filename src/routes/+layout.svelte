@@ -1,7 +1,9 @@
+
 <script lang="ts">
 	import favicon from '$lib/assets/lil_alien.png';
 
 	let { children } = $props();
+
 </script>
 
 <svelte:head>
