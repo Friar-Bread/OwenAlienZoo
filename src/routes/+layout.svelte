@@ -1,4 +1,3 @@
-
 <script lang="ts">
 	import favicon from '$lib/assets/lil_alien.png';
 
